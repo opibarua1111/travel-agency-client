@@ -7,46 +7,46 @@ import TopHeader from '../TopHeader/TopHeader';
 
 
 const Navigation = () => {
-    const {user} = useAuth();
+    const { user } = useAuth();
     let navheight;
     return (
         <div className="header-area">
-        <TopHeader page={"frontend"}></TopHeader>
+            <TopHeader page={"frontend"}></TopHeader>
 
-        { user.email ? navheight = '35px' :  navheight = '' }
-            <Navbar style={{top: navheight}}  className="header-navbar header-top-fixed" collapseOnSelect expand="lg" >
+            {user.email ? navheight = '5px' : navheight = ''}
+            <Navbar style={{ top: navheight }} className="header-navbar header-top-fixed" collapseOnSelect expand="lg" >
 
-        <Container className="header-container">
-        <Navbar.Brand as={Link} to="/">
-        <img
-            src={logo}
-            className="d-inline-block align-top header-logo"
-            alt="Zara Clinic"
-        />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/services">Services</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            
-            {!user.email ? 
-            <> 
-            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-            <Nav.Link as={Link} to="/register">Register</Nav.Link>
-            </>
-            : ""
+                <Container className="header-container">
+                    <Navbar.Brand as={Link} to="/">
+                        <img
+                            src={logo}
+                            className="d-inline-block align-top header-logo"
+                            alt="Zara Clinic"
+                        />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
 
-            }
-          
-           
-         
-            </Nav>
-        </Navbar.Collapse>
-        </Container>
-        </Navbar>
+                            {!user.email ?
+                                <>
+                                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                    <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                                </>
+                                : ""
+
+                            }
+
+
+
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
 
 

@@ -63,8 +63,6 @@ const Footer = () => {
                             <div className="col-md-4 col-lg-4">
                                 <h4>Instagram</h4>
                                 <div className="footer-insta">
-
-
                                     <Link to="/"><div className="overlay"></div><img src={inst1} alt="insta" /></Link>
                                     <Link to="/"><div className="overlay"></div><img src={inst2} alt="insta" /></Link>
                                     <Link to="/"><div className="overlay"></div><img src={inst3} alt="insta" /></Link>

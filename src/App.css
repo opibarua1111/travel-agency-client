@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* Dashboard Style  */
+nav.dashboard-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav.dashboard-menu ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px 10px;
+}
+nav.dashboard-menu ul li a:hover {
+  background: #0a3d62;
+  opacity: 0.9;
+}
+.dashboard-sidebar {
+  padding: 0 !important;
+  height: 100vh;
+  margin-top: 35px;
+}
+nav.dashboard-menu ul li a span {
+  margin-left: 10px;
+}
+/* review style  */
+
+.testimonial .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
