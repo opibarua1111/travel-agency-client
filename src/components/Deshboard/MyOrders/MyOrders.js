@@ -13,7 +13,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-orders?email=${user.email}`)
+        fetch(`https://guarded-earth-89233.herokuapp.com/my-orders?email=${user.email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [user.email]);
@@ -29,7 +29,7 @@ const MyOrders = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, You want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/my-orders/${id}`;
+            const url = `https://guarded-earth-89233.herokuapp.com/my-orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
 

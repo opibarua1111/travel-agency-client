@@ -7,7 +7,7 @@ const AddProduct = () => {
     const [success, setSuccess] = useState(false);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://guarded-earth-89233.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     setSuccess(true);

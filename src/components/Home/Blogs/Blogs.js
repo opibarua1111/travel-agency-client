@@ -9,15 +9,15 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     console.log(blogs.blogs);
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://guarded-earth-89233.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
     return (
         <div>
             <Navigation></Navigation>
-            <div className='blog container'>
-
+            <div className='blog container pb-4'>
+                <h3 className='pb-3'>Our Blogs</h3>
                 {
                     blogs.blogs?.map(blog => <div className='blog-details'
                         key={blog._id}>

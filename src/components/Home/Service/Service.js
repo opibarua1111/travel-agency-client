@@ -13,7 +13,7 @@ const Service = () => {
   let size = 10;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services?page=${page}&&size=${size}`)
+    fetch(`https://guarded-earth-89233.herokuapp.com/services?page=${page}&&size=${size}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data.services)

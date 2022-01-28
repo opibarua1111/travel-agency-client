@@ -14,7 +14,7 @@ const DashboardHome = () => {
     const [allUser, setAllUser] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/users`;
+        const url = `https://guarded-earth-89233.herokuapp.com/users`;
         fetch(url)
             .then(res => res.json())
             .then(data => setAllUser(data))
@@ -23,7 +23,7 @@ const DashboardHome = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/products`;
+        const url = `https://guarded-earth-89233.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -34,7 +34,7 @@ const DashboardHome = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/review`;
+        const url = `https://guarded-earth-89233.herokuapp.com/review`;
         fetch(url)
             .then(res => res.json())
             .then(data => setReviews(data))
@@ -43,7 +43,7 @@ const DashboardHome = () => {
     const [orders, setOrders] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-orders`)
+        fetch(`https://guarded-earth-89233.herokuapp.com/my-orders`)
             .then((res) => res.json())
             .then((data) => setOrders(data))
 

@@ -26,7 +26,7 @@ const AddExperience = () => {
             rating: myRating,
             status: "pending",
         }
-        axios.post('http://localhost:5000/blog', dataInfo)
+        axios.post('https://guarded-earth-89233.herokuapp.com/blog', dataInfo)
             .then(res => {
                 if (res.data.insertedId) {
                     setSuccess(true);

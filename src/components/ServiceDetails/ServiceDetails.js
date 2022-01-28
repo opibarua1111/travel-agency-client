@@ -6,7 +6,7 @@ const ServiceDetails = () => {
     console.log(id);
     const [project, setProject] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://guarded-earth-89233.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setProject(data));
     }, []);

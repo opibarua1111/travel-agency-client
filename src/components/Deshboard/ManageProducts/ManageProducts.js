@@ -14,7 +14,7 @@ const ManageProducts = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services`)
+        fetch(`https://guarded-earth-89233.herokuapp.com/services`)
             .then((res) => res.json())
             .then((data) => setOrders(data))
 
@@ -33,7 +33,7 @@ const ManageProducts = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, You want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/services/${id}`;
+            const url = `https://guarded-earth-89233.herokuapp.com/services/${id}`;
             fetch(url, {
                 method: 'DELETE'
 
@@ -71,15 +71,10 @@ const ManageProducts = () => {
                         {
                             orders?.map((order, index) => <tr key={order._id} >
 
-
-
-
                                 <td><img style={{ width: '100px' }} src={order?.image} alt="product" /></td>
                                 <td>{order?.title}</td>
                                 <td>{order?.description?.substring(0, 100)}...</td>
                                 <td>{order?.cost}</td>
-
-
                                 <td className="text-center"><button onClick={() => handleDeleteUser(order?._id)} className="btn btn-link text-danger">{Trash}</button></td>
                             </tr>
 
