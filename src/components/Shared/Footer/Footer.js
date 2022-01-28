@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../../images/logo.png';
 import inst1 from '../../../images/instagram/1.jpg';
 import inst2 from '../../../images/instagram/2.jpg';
 import inst3 from '../../../images/instagram/3.jpg';
@@ -29,7 +28,7 @@ const Footer = () => {
                     <div className="container bd-travel-p-60-60">
                         <div className="row">
                             <div className="col-md-4 col-lg-4">
-                                <img className="bd-travel-footer-logo" src={logo} alt="Kinsley" />
+                                <img className="bd-travel-footer-logo img-fluid w-25 " src="https://i.ibb.co/yqjhnxV/travel-agency.png" alt="Kinsley" />
                                 <div className="bd-travel-footer-about">BD Travel Agency is a powerful flagship camera drone equipped with a 4/3 CMOS Hasselblad camera to facilitate professional-level imaging. It also offers omnidirectional obstacle.</div>
                                 <ul className="bd-travel-footer-social">
                                     <li><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">{Facebook}</a></li>

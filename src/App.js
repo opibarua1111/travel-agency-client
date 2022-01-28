@@ -16,6 +16,7 @@ import MakeAdmin from './components/Deshboard/MakeAdmin/MakeAdmin';
 import ManageAllOrders from './components/Deshboard/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './components/Deshboard/ManageProducts/ManageProducts';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import Blogs from './components/Home/Blogs/Blogs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/serviceDetails/:id" element={<ServiceDetails />} />

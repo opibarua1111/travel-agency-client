@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import logo from '../../../images/logo.png'
 import TopHeader from '../TopHeader/TopHeader';
 
 
@@ -19,8 +18,8 @@ const Navigation = () => {
                 <Container className="header-container">
                     <Navbar.Brand as={Link} to="/">
                         <img
-                            src={logo}
-                            className="d-inline-block align-top header-logo"
+                            src="https://i.ibb.co/yqjhnxV/travel-agency.png"
+                            className="d-inline-block align-top header-logo img-fluid w-50"
                             alt="Zara Clinic"
                         />
                     </Navbar.Brand>
@@ -28,8 +27,7 @@ const Navigation = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+                            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
 
                             {!user.email ?
@@ -40,9 +38,6 @@ const Navigation = () => {
                                 : ""
 
                             }
-
-
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
